@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicamentos a domicilio en Colonia del Sacramento | Retiramos en CAMEC, Hospital y farmacias</title>
+<meta name="description" content="Retiramos los medicamentos de tus padres en CAMEC, Hospital de Colonia o farmacias y se los llevamos a su puerta. Sin filas, con comprobante. Servicio local en Colonia del Sacramento.">
+<meta name="theme-color" content="#0F766E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { teal: { DEFAULT: '#0F766E', dark: '#0B5C56', soft: '#E6F4F2' }, royal: { DEFAULT: '#1E40AF', soft: '#E8EDFB' }, ink: '#0F172A', mist: '#F8FAFC' },
+        fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], body: ['"Atkinson Hyperlegible"', 'system-ui', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; color: #0F172A; background: #F8FAFC; font-size: 1.0625rem; line-height: 1.6; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.01em; }
+  :focus-visible { outline: 3px solid #1E40AF; outline-offset: 3px; border-radius: 6px; }
+  .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+  .faq-panel[data-open="true"] { grid-template-rows: 1fr; }
+  .faq-panel > div { overflow: hidden; }
+  .choice input:checked + span { border-color: #0F766E; background: #E6F4F2; box-shadow: 0 0 0 2px #0F766E inset; }
+  .choice input:focus-visible + span { outline: 3px solid #1E40AF; outline-offset: 2px; }
+  @keyframes pop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+  .bubble { opacity: 0; animation: pop .45s ease forwards; }
+  .bubble:nth-child(1) { animation-delay: .2s; } .bubble:nth-child(2) { animation-delay: 1s; }
+  .bubble:nth-child(3) { animation-delay: 1.8s; } .bubble:nth-child(4) { animation-delay: 2.6s; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .bubble { animation: none; opacity: 1; }
+    .faq-panel { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#pedido" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-ink">Ir al formulario de pedido</a>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
+    <a href="#inicio" class="flex items-center gap-2 min-w-0" aria-label="Medicina en Casa Colonia, inicio">
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal text-white"><i data-lucide="house-plus" class="h-6 w-6"></i></span>
+      <span class="font-display text-lg font-bold leading-tight text-ink">Medicina en Casa <span class="hidden sm:inline text-teal">Colonia</span></span>
+    </a>
+    <div class="flex items-center gap-3">
+      <span class="hidden lg:inline-flex items-center gap-1.5 rounded-full bg-royal-soft px-3 py-1.5 text-sm font-bold text-royal">
+        <i data-lucide="map-pin" class="h-4 w-4"></i> Servicio local en Colonia del Sacramento
+      </span>
+      <a data-wa="Hola, quiero consultar por el servicio de retiro de medicamentos a domicilio." target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 rounded-xl bg-teal px-4 py-2.5 font-bold text-white hover:bg-teal-dark transition-colors">
+        <i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="lg:hidden bg-royal-soft text-royal text-sm font-bold text-center py-1.5 flex items-center justify-center gap-1.5">
+    <i data-lucide="map-pin" class="h-4 w-4"></i> Servicio local en Colonia del Sacramento
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- HERO -->
+<section class="bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <div>
+      <h1 class="text-4xl sm:text-5xl font-bold leading-[1.1] text-ink">Los medicamentos de tus padres en la puerta de su casa, sin colas ni esperas</h1>
+      <p class="mt-5 text-xl text-slate-700 max-w-xl">Vos seguís con tu día. Nosotros hacemos la fila en CAMEC, en el Hospital o en la farmacia, y se los entregamos en mano. Ellos descansan en casa y vos te quedás tranquilo/a.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a data-wa="Hola, quiero pedir el retiro de medicamentos para un familiar en Colonia del Sacramento. ¿Me ayudan?" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-3 rounded-2xl bg-teal px-7 py-4 text-lg font-bold text-white shadow-lg shadow-teal/25 hover:bg-teal-dark transition-colors">
+          <i data-lucide="message-circle" class="h-6 w-6"></i> Escribinos por WhatsApp
+        </a>
+        <a href="#precios" class="inline-flex items-center justify-center rounded-2xl border-2 border-royal px-7 py-4 text-lg font-bold text-royal hover:bg-royal-soft transition-colors">Ver precios</a>
+      </div>
+      <ul class="mt-9 grid gap-3 sm:grid-cols-1 max-w-xl">
+        <li class="flex items-start gap-3"><span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-soft text-teal"><i data-lucide="building-2" class="h-5 w-5"></i></span><span class="font-bold">Retiro en CAMEC, Hospital y farmacias</span></li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-soft text-teal"><i data-lucide="shield-check" class="h-5 w-5"></i></span><span class="font-bold">Entrega puntual y segura, con comprobante</span></li>
+        <li class="flex items-start gap-3"><span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-soft text-teal"><i data-lucide="heart-handshake" class="h-5 w-5"></i></span><span class="font-bold">Trato personalizado, siempre las mismas personas</span></li>
+      </ul>
+    </div>
+
+    <!-- Conversación de ejemplo -->
+    <div class="relative mx-auto w-full max-w-md" aria-label="Ejemplo de cómo se ve un pedido por WhatsApp">
+      <div class="rounded-3xl border border-slate-200 bg-[#ECE5DD] p-4 shadow-xl">
+        <div class="flex items-center gap-3 rounded-2xl bg-teal px-4 py-3 text-white">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/20"><i data-lucide="house-plus" class="h-5 w-5"></i></span>
+          <div><p class="font-bold leading-tight">Medicina en Casa</p><p class="text-sm text-white/90 leading-tight">en línea</p></div>
+        </div>
+        <div class="mt-4 flex flex-col gap-3 text-base">
+          <p class="bubble self-end max-w-[85%] rounded-2xl rounded-tr-sm bg-[#D9FDD3] px-4 py-2.5">Hola, tengo que retirar la medicación de mi mamá en CAMEC y no llego. ¿Pueden?</p>
+          <p class="bubble self-start max-w-[85%] rounded-2xl rounded-tl-sm bg-white px-4 py-2.5">¡Claro! Pasanos su cédula. Si la orden es en papel la pasamos a buscar por tu casa, y si es electrónica vamos directo.</p>
+          <p class="bubble self-start max-w-[85%] rounded-2xl rounded-tl-sm bg-white px-4 py-2.5">Ya retiramos todo. Salimos para su casa y te avisamos cuando llegamos.</p>
+          <p class="bubble self-start max-w-[85%] rounded-2xl rounded-tl-sm bg-white px-4 py-2.5 flex items-center gap-2"><i data-lucide="check-check" class="h-5 w-5 shrink-0 text-royal"></i> Entregado en mano. Te enviamos el comprobante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona" class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+  <h2 class="text-3xl sm:text-4xl font-bold max-w-2xl">Así de simple: tres pasos y listo</h2>
+  <p class="mt-3 text-lg text-slate-700 max-w-2xl">No hace falta que nadie salga de casa ni pida permiso en el trabajo.</p>
+  <ol class="mt-10 grid gap-5 md:grid-cols-3">
+    <li class="rounded-2xl bg-white border border-slate-200 p-6">
+      <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal text-xl font-bold text-white font-display">1</span>
+      <h3 class="mt-4 text-xl font-bold">Coordinamos por WhatsApp</h3>
+      <p class="mt-2 text-slate-700">Nos pasás la cédula del titular. Si la receta ya está cargada en el sistema (electrónica), vamos directo. Si tenés la orden en papel, pasamos a buscarla por tu domicilio antes de ir.</p>
+    </li>
+    <li class="rounded-2xl bg-white border border-slate-200 p-6">
+      <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal text-xl font-bold text-white font-display">2</span>
+      <h3 class="mt-4 text-xl font-bold">Hacemos la fila por vos</h3>
+      <p class="mt-2 text-slate-700">Vamos a CAMEC, al Hospital o a la farmacia, esperamos el turno y gestionamos el retiro o la compra. Te avisamos cuando está todo listo.</p>
+    </li>
+    <li class="rounded-2xl bg-white border border-slate-200 p-6">
+      <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal text-xl font-bold text-white font-display">3</span>
+      <h3 class="mt-4 text-xl font-bold">Entrega en mano, con comprobante</h3>
+      <p class="mt-2 text-slate-700">Llevamos los medicamentos hasta la puerta del domicilio, los entregamos en mano y te enviamos el comprobante por WhatsApp.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="bg-white border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl sm:text-4xl font-bold max-w-2xl">Precios claros, sin sorpresas</h2>
+    <p class="mt-3 text-lg text-slate-700 max-w-2xl">El costo del servicio se informa antes de salir. El valor de los medicamentos o tiques se abona aparte, tal cual lo cobra la institución.</p>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 items-stretch">
+      <article class="rounded-3xl border-2 border-slate-200 bg-mist p-7 flex flex-col">
+        <h3 class="text-2xl font-bold">Servicio puntual</h3>
+        <p class="mt-1 text-slate-700">Para cuando necesitás resolver una sola gestión.</p>
+        <p class="mt-5 font-display text-4xl font-bold text-ink">$450 a $600 <span class="font-body text-base font-normal text-slate-700">UYU por gestión</span></p>
+        <ul class="mt-6 space-y-3 flex-1">
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0 text-teal"></i> Retiro en una institución o farmacia</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0 text-teal"></i> Entrega en mano en el domicilio</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0 text-teal"></i> Comprobante por WhatsApp</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0 text-teal"></i> El precio final depende de la zona y la espera</li>
+        </ul>
+        <a data-wa="Hola, quiero pedir un servicio puntual de retiro de medicamentos." target="_blank" rel="noopener" class="mt-7 inline-flex items-center justify-center rounded-2xl border-2 border-teal px-6 py-3.5 text-lg font-bold text-teal hover:bg-teal-soft transition-colors">Pedir servicio puntual</a>
+      </article>
+
+      <article class="relative rounded-3xl border-2 border-teal bg-teal p-7 text-white flex flex-col shadow-xl shadow-teal/20">
+        <span class="absolute -top-4 left-7 rounded-full bg-white px-4 py-1 text-sm font-bold text-teal border-2 border-teal">La opción más elegida por las familias</span>
+        <h3 class="text-2xl font-bold">Plan mensual “Tranquilidad”</h3>
+        <p class="mt-1 text-white/95">Para medicación crónica y tratamientos continuos.</p>
+        <p class="mt-5 font-display text-4xl font-bold">$1.200 a $1.800 <span class="font-body text-base font-normal text-white/95">UYU por mes</span></p>
+        <ul class="mt-6 space-y-3 flex-1">
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0"></i> Gestión mensual de recetas crónicas</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0"></i> Aviso antes de que se acabe la medicación</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0"></i> Entrega a domicilio cada mes, siempre con comprobante</li>
+          <li class="flex gap-3"><i data-lucide="check" class="h-6 w-6 shrink-0"></i> Un único contacto que conoce el caso</li>
+        </ul>
+        <a data-wa="Hola, quiero consultar por el Plan mensual Tranquilidad para medicación crónica." target="_blank" rel="noopener" class="mt-7 inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 text-lg font-bold text-teal-dark hover:bg-teal-soft transition-colors">Quiero el plan mensual</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section id="pedido" class="max-w-3xl mx-auto px-4 py-16 md:py-20">
+  <h2 class="text-3xl sm:text-4xl font-bold">Armá tu pedido en un minuto</h2>
+  <p class="mt-3 text-lg text-slate-700">Completá los datos y se abre WhatsApp con el mensaje listo para enviar. Si la orden es en papel, coordinamos para pasar a retirarla primero.</p>
+
+  <form id="orderForm" class="mt-8 rounded-3xl bg-white border border-slate-200 p-5 sm:p-8 space-y-7" novalidate>
+    <div>
+      <label for="nombre" class="block text-lg font-bold">Nombre de quien recibe</label>
+      <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej.: María Rodríguez" class="mt-2 w-full rounded-xl border-2 border-slate-300 px-4 py-3.5 text-lg placeholder:text-slate-500 focus:border-royal focus:outline-none" aria-describedby="err-nombre">
+      <p id="err-nombre" class="mt-1.5 hidden text-base font-bold text-red-700" role="alert">Escribí el nombre de la persona que recibe.</p>
+    </div>
+
+    <div>
+      <label for="direccion" class="block text-lg font-bold">Dirección o barrio en Colonia del Sacramento</label>
+      <input id="direccion" name="direccion" type="text" autocomplete="street-address" placeholder="Ej.: Av. Roosevelt 123, Barrio Histórico" class="mt-2 w-full rounded-xl border-2 border-slate-300 px-4 py-3.5 text-lg placeholder:text-slate-500 focus:border-royal focus:outline-none" aria-describedby="err-direccion">
+      <p id="err-direccion" class="mt-1.5 hidden text-base font-bold text-red-700" role="alert">Indicanos la dirección o el barrio de entrega.</p>
+    </div>
+
+    <fieldset aria-describedby="err-lugar">
+      <legend class="text-lg font-bold">¿Dónde se retira?</legend>
+      <div class="mt-3 grid gap-3 sm:grid-cols-3">
+        <label class="choice cursor-pointer"><input type="radio" name="lugar" value="CAMEC" class="sr-only"><span class="flex h-full min-h-[4.5rem] items-center gap-3 rounded-xl border-2 border-slate-300 px-4 py-3 text-lg font-bold transition-colors"><i data-lucide="hospital" class="h-6 w-6 shrink-0 text-teal"></i> CAMEC</span></label>
+        <label class="choice cursor-pointer"><input type="radio" name="lugar" value="Hospital Departamental de Colonia" class="sr-only"><span class="flex h-full min-h-[4.5rem] items-center gap-3 rounded-xl border-2 border-slate-300 px-4 py-3 text-lg font-bold transition-colors"><i data-lucide="building-2" class="h-6 w-6 shrink-0 text-teal"></i> Hospital de Colonia</span></label>
+        <label class="choice cursor-pointer"><input type="radio" name="lugar" value="Farmacia comercial" class="sr-only"><span class="flex h-full min-h-[4.5rem] items-center gap-3 rounded-xl border-2 border-slate-300 px-4 py-3 text-lg font-bold transition-colors"><i data-lucide="pill" class="h-6 w-6 shrink-0 text-teal"></i> Farmacia comercial</span></label>
+      </div>
+      <p id="err-lugar" class="mt-1.5 hidden text-base font-bold text-red-700" role="alert">Elegí dónde hay que retirar.</p>
+    </fieldset>
+
+    <fieldset aria-describedby="err-tipo">
+      <legend class="text-lg font-bold">Tipo de medicación</legend>
+      <div class="mt-3 grid gap-3 sm:grid-cols-2">
+        <label class="choice cursor-pointer"><input type="radio" name="tipo" value="Electrónica en sistema (no precisa papel)" class="sr-only"><span class="flex h-full min-h-[4.5rem] items-center gap-3 rounded-xl border-2 border-slate-300 px-4 py-3 text-lg font-bold transition-colors"><i data-lucide="repeat" class="h-6 w-6 shrink-0 text-teal"></i> Receta electrónica (en sistema)</span></label>
+        <label class="choice cursor-pointer"><input type="radio" name="tipo" value="Papel físico (pasamos a retirarla antes)" class="sr-only"><span class="flex h-full min-h-[4.5rem] items-center gap-3 rounded-xl border-2 border-slate-300 px-4 py-3 text-lg font-bold transition-colors"><i data-lucide="file-text" class="h-6 w-6 shrink-0 text-teal"></i> Orden en papel (la pasamos a buscar)</span></label>
+      </div>
+      <p id="err-tipo" class="mt-1.5 hidden text-base font-bold text-red-700" role="alert">Elegí el tipo de medicación.</p>
+    </fieldset>
+
+    <button type="submit" class="w-full inline-flex items-center justify-center gap-3 rounded-2xl bg-teal px-7 py-5 text-xl font-bold text-white shadow-lg shadow-teal/25 hover:bg-teal-dark transition-colors">
+      <i data-lucide="message-circle" class="h-6 w-6"></i> Pedir por WhatsApp
+    </button>
+    <p class="text-center text-base text-slate-700">No se envía nada hasta que toques “Enviar” en WhatsApp.</p>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas" class="bg-white border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl sm:text-4xl font-bold">Preguntas frecuentes</h2>
+    <div class="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200" id="faq">
+      <div>
+        <h3><button type="button" class="faq-btn flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold" aria-expanded="false" aria-controls="faq1">¿Pueden retirar medicamentos controlados o psicofármacos?<i data-lucide="chevron-down" class="h-6 w-6 shrink-0 text-teal transition-transform"></i></button></h3>
+        <div id="faq1" class="faq-panel" data-open="false" role="region"><div><p class="px-5 pb-5 text-slate-700">Sí. Quien retira debe ser mayor de 18 años, y se necesita la cédula de quien autoriza junto con la receta física original que corresponda a cada medicamento. Los entregamos únicamente en mano.</p></div></div>
+      </div>
+      <div>
+        <h3><button type="button" class="faq-btn flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold" aria-expanded="false" aria-controls="faq2">¿Tiene que ir el adulto mayor?<i data-lucide="chevron-down" class="h-6 w-6 shrink-0 text-teal transition-transform"></i></button></h3>
+        <div id="faq2" class="faq-panel" data-open="false" role="region"><div><p class="px-5 pb-5 text-slate-700">No. Se gestiona con la cédula y la orden o receta. Así evitan las filas, el sol y el frío, y solo tienen que estar en casa para recibir el pedido.</p></div></div>
+      </div>
+      <div>
+        <h3><button type="button" class="faq-btn flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold" aria-expanded="false" aria-controls="faq3">¿Cómo se abona el costo del medicamento o del tique?<i data-lucide="chevron-down" class="h-6 w-6 shrink-0 text-teal transition-transform"></i></button></h3>
+        <div id="faq3" class="faq-panel" data-open="false" role="region"><div><p class="px-5 pb-5 text-slate-700">Podés pagar en efectivo en mano al recibir, por transferencia o con Mercado Pago. Siempre te enviamos el comprobante de lo abonado en la institución o farmacia.</p></div></div>
+      </div>
+      <div>
+        <h3><button type="button" class="faq-btn flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold" aria-expanded="false" aria-controls="faq4">¿En qué zonas de Colonia atienden?<i data-lucide="chevron-down" class="h-6 w-6 shrink-0 text-teal transition-transform"></i></button></h3>
+        <div id="faq4" class="faq-panel" data-open="false" role="region"><div><p class="px-5 pb-5 text-slate-700">Atendemos el casco urbano, Real de San Carlos, El General y barrios cercanos. Si tu domicilio está en otra zona, escribinos y lo coordinamos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-bold">Medicina en Casa Colonia</p>
+      <p class="mt-2 text-slate-200">Gestión de retiro y entrega de medicamentos en Colonia del Sacramento, Uruguay.</p>
+    </div>
+    <div>
+      <p class="font-bold text-lg">Contacto directo</p>
+      <a data-wa="Hola, quiero hacer una consulta." target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 rounded-xl bg-teal px-5 py-3 font-bold hover:bg-teal-dark transition-colors"><i data-lucide="message-circle" class="h-5 w-5"></i> Escribinos por WhatsApp</a>
+      <p id="phoneText" class="mt-3 text-slate-200"></p>
+      <div id="socials" class="mt-3 flex gap-3"></div>
+    </div>
+    <div>
+      <p class="font-bold text-lg">Importante</p>
+      <p class="mt-2 text-slate-200">Este no es un servicio de emergencias médicas. Brindamos gestión logística y asistencia para retirar y entregar medicamentos. Ante una urgencia, llamá al 911 o al servicio de emergencia móvil que corresponda.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/20 py-5 text-center text-slate-200 text-base">© <span id="year"></span> Medicina en Casa Colonia. Colonia del Sacramento, Uruguay.</div>
+</footer>
+
+<script>
+/* ============ CONFIGURACIÓN: editá solo este bloque ============ */
+const CONFIG = {
+  // Número de WhatsApp con código de país y sin "+", espacios ni guiones. Uruguay = 598.
+  // Ejemplo: celular 099 123 456 → "59899123456"
+  WHATSAPP_NUMBER: "59892873402",
+  // Número visible en el footer (formato legible)
+  PHONE_DISPLAY: "092 873 402",
+  // Redes: dejalas vacías ("") para ocultarlas
+  INSTAGRAM_URL: "",
+  FACEBOOK_URL: ""
+};
+/* ================================================================ */
+
+const waLink = (text) => `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+// Enlaces de WhatsApp con mensaje predeterminado
+document.querySelectorAll('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); });
+
+// Footer
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('phoneText').textContent = 'Tel. / WhatsApp: ' + CONFIG.PHONE_DISPLAY;
+const socials = document.getElementById('socials');
+[['INSTAGRAM_URL','instagram','Instagram'],['FACEBOOK_URL','facebook','Facebook']].forEach(([k, icon, label]) => {
+  if (!CONFIG[k]) return;
+  const a = document.createElement('a');
+  a.href = CONFIG[k]; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', label);
+  a.className = 'flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors';
+  a.innerHTML = `<i data-lucide="${icon}" class="h-5 w-5"></i>`;
+  socials.appendChild(a);
+});
+
+// Formulario → WhatsApp
+const form = document.getElementById('orderForm');
+const show = (id, bad) => document.getElementById(id).classList.toggle('hidden', !bad);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nombre = form.nombre.value.trim();
+  const direccion = form.direccion.value.trim();
+  const lugar = form.querySelector('input[name="lugar"]:checked');
+  const tipo = form.querySelector('input[name="tipo"]:checked');
+
+  show('err-nombre', !nombre); show('err-direccion', !direccion);
+  show('err-lugar', !lugar); show('err-tipo', !tipo);
+  form.nombre.classList.toggle('border-red-700', !nombre);
+  form.direccion.classList.toggle('border-red-700', !direccion);
+
+  const firstBad = !nombre ? form.nombre : !direccion ? form.direccion : !lugar ? form.querySelector('input[name="lugar"]') : !tipo ? form.querySelector('input[name="tipo"]') : null;
+  if (firstBad) { firstBad.focus(); firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+
+  const msg = [
+    'Hola, quiero pedir un retiro de medicamentos a domicilio:',
+    '',
+    `• Recibe: ${nombre}`,
+    `• Dirección / barrio: ${direccion}, Colonia del Sacramento`,
+    `• Retiro en: ${lugar.value}`,
+    `• Tipo de medicación: ${tipo.value}`,
+    '',
+    'A continuación les paso los datos de la cédula para coordinar. ¡Gracias!'
+  ].join('\n');
+  window.open(waLink(msg), '_blank', 'noopener');
+});
+['nombre','direccion'].forEach(id => form[id].addEventListener('input', () => { show('err-' + id, false); form[id].classList.remove('border-red-700'); }));
+form.querySelectorAll('input[type="radio"]').forEach(r => r.addEventListener('change', () => show('err-' + r.name, false)));
+
+// FAQ acordeón
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.dataset.open = String(!open);
+    btn.querySelector('svg, i').style.transform = open ? '' : 'rotate(180deg)';
+  });
+});
+
+lucide.createIcons();
+</script>
+</body>
+</html>
